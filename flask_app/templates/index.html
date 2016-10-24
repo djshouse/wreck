@@ -1,0 +1,373 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Movie Recommendations{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block navbar %}
+<header class="navbar-inverse">
+	<div class="container">
+		<nav class="navbar" role="banner">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Movie Recommendations</a>
+				</div>
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3" id="left">
+			<form>
+				<div class="row">
+					<div class="col-sm-4">
+						<button type="submit" class="btn btn-primary vcenter">Submit Ratings</button>
+					</div>
+				</div>
+				<table class="table table-hover table-condensed">
+					<thead>
+						<th class="movie-title">Title</th>
+						<th class="rating">Rating</th>
+					</thead>
+					<tbody>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 1</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 2</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 3</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 4</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 5</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 6</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 7</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 8</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 9</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 10</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 11</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 12</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 13</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 14</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 15</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 16</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 17</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 18</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 19</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-10">
+									<td>
+										<h5>Movie Title 20</h5>
+									</td>
+								</div>
+								<div class="col-sm-2">
+									<td>
+										<input type="number" min="0", max="5" class="form-control text-center"/>
+									</td>
+								</div>
+							</div>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div class="row">
+			<div class="col-sm-8" id="right">
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/0b2e453191d176865ec61c9e98c833d91bf47f71.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/0ba0b6aae8dd088ab6be2f150307e5e2ca6f6caf.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/0ce026a8808f25ea3cb4b8220ea15d1e5cc234bb.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/1a72955f59fade792071b23e8f442eb14020cbe0.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/2b2e298e62047128defbd59cce0aa75052a1f304.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/2d36b016b03f213c0590dc4caa82a352dcbd5abd.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/3a1804a281e1a6d48ca3fac21620e1565c462427.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/3c2f4c78abefe2d1d6c9c6d3e5599a9d21e366bf.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/3c30c4f1f998c5fcbca4c146efd45ca137681893.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/3ce8de2f14329619003512ff71dd7bca43f0a1d8.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/3d8fb01b2625ba43e547c4e333d86ce2b3ebd973.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img class="thumbnail" src="static/scrape_posters/scrape_posters/output/full/3eac3d7bba8fe09de321962bc07401fbe5c35fad.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

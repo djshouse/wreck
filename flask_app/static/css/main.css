@@ -1,0 +1,33 @@
+@media (min-width: 768px){
+  #left {
+    position: fixed;
+    top: 75px;
+    bottom: 0;
+    left: 70px;
+    overflow-y: scroll;
+  }
+
+  #right {
+    position: absolute;
+    top: 75px;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+  }
+}
+
+.side {
+	background-color: #4FC1E9;
+}
+
+.movie-title {
+	width: 80%;
+}
+
+.rating {
+	width: 20%;
+}
+
+.vcenter {
+	vertical-align: middle;
+}
